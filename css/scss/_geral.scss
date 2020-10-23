@@ -1,0 +1,62 @@
+@charset "UTF-8"; 
+
+// Mixings cores
+
+$branco: #ffffff;
+$preto: #252525;
+$cinza-medio: #515151;
+$cinza-escuro: #393939;
+$cinza-claro: #6A6A6A;
+$bg-color: #fdfdfd;
+
+body, h1, h2, h3, ul, li, img, p, ul, li{
+    margin: 0px;
+    padding: 0px;
+}
+@font-face{
+    font-family: 'Creighton';
+    src: url(fonts/creightonreg.otf);
+    font-weight: normal;
+    font-style: normal;
+    
+    font-family: 'Creighton2';
+    src: url(../fonts/creightonreg.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Creighton', 'Creighton2', sans-serif;
+    background: $bg-color;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3{
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style-type: none;
+}
+// Functions
+
+@function em($size, $context: 16){
+    @return $size / $context + em;
+} 
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}

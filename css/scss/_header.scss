@@ -1,0 +1,62 @@
+.wrapper{
+    background: $branco;
+    box-shadow: 0px 0px 2px rgba($color: #000000, $alpha: .5);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.header{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+
+    @include device(phone){
+        max-width: 300px;
+        margin: 0px auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &-logo{
+        margin: 0px 0px;
+        width: 200px;
+        @include device(phone){
+            margin: 0px 8px;
+        }
+    }
+    &-nav{
+        font-size: em(36);
+        text-transform: uppercase;
+
+        a{
+            color: $preto;
+            padding: 0px 8px;
+            transition: 0.5s;
+            border-bottom: 5px solid $branco;
+            &:hover{
+                border-bottom-color: $cinza-escuro;
+            }
+        }
+        @include device(phone){
+            display: none;
+        }
+    }
+
+    h2{
+        text-transform: uppercase;
+        font-size: em(36);
+        @include device(phone){
+            font-size: em(28);
+            margin: 16px 0px;
+            padding: 16px 0px;;
+            text-align: center;
+            border-top: 5px solid $preto;
+            border-bottom: 5px solid $preto;
+            display: none;
+        }
+    }
+}
